@@ -1,6 +1,6 @@
 # Neural Network Diagnosing Diabetes
 
-Training a [TensorFlow]-based fully-connected neural network to diagnose patients with diabetes.
+Training a [TensorFlow]-based fully connected neural network to diagnose patients with diabetes.
 
 ---
 
@@ -24,13 +24,13 @@ The objective is to create a classifier to predict if a person has diabetes or n
 
 ## Analysis Introduction
 
-In this project, we show how to preprocess and select the most relevant variables to train a simple fully-connected neural network. Explanatory variables are subject to being discarded due to high correlation with other explanatory variables (for carrying similar information),  or due to low correlation with the response variable (for not making good contributions to the model). Correlations are evaluated with pair plots and a correlation matrix:
+In this project, we show how to preprocess and select the most relevant variables to train a simple fully connected neural network. Explanatory variables are subject to being discarded due to high correlation with other explanatory variables (for carrying similar information),  or due to low correlation with the response variable (for not making good contributions to the model). Correlations are evaluated with pair plots and a correlation matrix:
 
 ![corr_matrix_diabetes_nn](https://user-images.githubusercontent.com/33037020/191629012-4878719c-1ba4-40a9-8723-b5ccf738f094.png)
 
 With the 5 most meaningful explanatory variables selected from the 8 original, a neural network with two hidden layers is trained. Two hidden layers have been known in the [literature] for being capable of modeling most practical problems. Since our diabetes dataset already presents features in a numerical manner, it is not necessary to add more layers to perform feature extraction.
 
-Results are promising given the amount of available data (just 768 instances), staying around 82% in accuracy. Our trained fully-connected neural network achieves an F1-score of 0.87 considering class 0 only (not having diabetes). Only 268 instances are available for class 1 (having diabetes), and 30% of them are separated for validation and testing. Consequently, the model is not able to achieve optimal performance considering class 1 only, with F1-score staying at 0.71. Data augmentation would probably improve the performance of the model.
+Results are promising given the amount of available data (just 768 instances), staying around 82% in accuracy. Our trained fully connected neural network achieves an F1-score of 0.87 considering class 0 only (not having diabetes). Only 268 instances are available for class 1 (having diabetes), and 30% of them are separated for validation and testing. Consequently, the model is not able to achieve optimal performance considering class 1 only, with F1-score staying at 0.71. Data augmentation would probably improve the performance of the model.
 
 [//]: #
 
